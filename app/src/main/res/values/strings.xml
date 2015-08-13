@@ -7,6 +7,7 @@
     <string name="title_activity_chat">Chat with %s</string>
     <string name="btn_activity_back">Back</string>
     <string name="btn_send">Send</string>
+    <string name="action_text">Text</string>
     <string name="action_image">Image</string>
     <string name="action_select_image">Select Image</string>
     <string name="action_voice">Voice</string>

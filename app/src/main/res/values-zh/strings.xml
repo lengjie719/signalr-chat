@@ -4,6 +4,7 @@
 
     <string name="title_activity_chat">与%s对话</string>
     <string name="btn_send">发送</string>
+    <string name="action_text">文字</string>
     <string name="action_image">图片</string>
     <string name="action_voice">语音</string>
     <string name="action_select_image">选择图片</string>
