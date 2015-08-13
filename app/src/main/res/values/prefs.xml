@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prefs_name" translatable="false">prefs_name</string>
+    <string name="prefs_language" translatable="false">prefs_language</string>
+</resources>
