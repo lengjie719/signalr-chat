@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import net.pinggang.signalr.chat.R;
+import net.pingfang.signalr.chat.R;
 
 public class MainActivity extends AppCompatActivity {
 

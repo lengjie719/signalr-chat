@@ -2,7 +2,7 @@ package net.pingfang.signalr.chat.util;
 
 import android.app.Application;
 
-import net.pinggang.signalr.chat.R;
+import net.pingfang.signalr.chat.R;
 
 import java.util.Locale;
 

@@ -3,7 +3,7 @@ package net.pingfang.signalr.chat.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import net.pinggang.signalr.chat.R;
+import net.pingfang.signalr.chat.R;
 
 /**
  * Created by gongguopei87@gmail.com on 2015/8/13.

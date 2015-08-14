@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import net.pinggang.signalr.chat.R;
+import net.pingfang.signalr.chat.R;
 import net.pingfang.signalr.chat.service.ChatService;
 import net.pingfang.signalr.chat.util.GlobalApplication;
 import net.pingfang.signalr.chat.util.MediaFileUtils;
