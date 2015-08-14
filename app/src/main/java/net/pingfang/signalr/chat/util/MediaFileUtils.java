@@ -1,4 +1,4 @@
-package net.pinggang.signalr.chat.util;
+package net.pingfang.signalr.chat.util;
 
 import android.content.Context;
 import android.database.Cursor;

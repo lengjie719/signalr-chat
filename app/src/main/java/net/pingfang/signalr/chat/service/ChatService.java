@@ -1,10 +1,10 @@
-package net.pinggang.signalr.chat.service;
+package net.pingfang.signalr.chat.service;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
-import net.pinggang.signalr.chat.util.GlobalApplication;
+import net.pingfang.signalr.chat.util.GlobalApplication;
 
 import java.util.concurrent.ExecutionException;
 

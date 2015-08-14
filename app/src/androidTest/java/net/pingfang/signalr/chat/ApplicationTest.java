@@ -1,4 +1,4 @@
-package net.pinggang.signalr.chat;
+package net.pingfang.signalr.chat;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

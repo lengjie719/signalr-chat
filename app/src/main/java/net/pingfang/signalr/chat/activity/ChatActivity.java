@@ -1,4 +1,4 @@
-package net.pinggang.signalr.chat.activity;
+package net.pingfang.signalr.chat.activity;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -32,13 +32,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.pinggang.signalr.chat.R;
-import net.pinggang.signalr.chat.service.ChatService;
-import net.pinggang.signalr.chat.util.GlobalApplication;
-import net.pinggang.signalr.chat.util.MediaFileUtils;
+import net.pingfang.signalr.chat.service.ChatService;
+import net.pingfang.signalr.chat.util.GlobalApplication;
+import net.pingfang.signalr.chat.util.MediaFileUtils;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class ChatActivity extends AppCompatActivity implements View.OnClickListener{
 
     public static final int REQUEST_IMAGE_GET = 0x01;
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chat);
 
         chatService = ChatService.newInstance(getApplicationContext());
 
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void popupMenu(View view) {
-        ContextThemeWrapper wrapper = new ContextThemeWrapper(getApplicationContext(), R.style.MyPopupMenu);
+        ContextThemeWrapper wrapper = new ContextThemeWrapper(getApplicationContext(), R.style.AppTheme);
         PopupMenu popup = new PopupMenu(wrapper, view);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.menu_message_actions, popup.getMenu());
