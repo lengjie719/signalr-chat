@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">signalr-chat</string>
+    <string name="action_settings">设置</string>
+    <string name="btn_activity_back">返回</string>
+
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册</string>
+    <string name="hello_world">引导页</string>
+
+    <string name="hint_et_login_no">手机号码/QQ/微信</string>
+    <string name="hint_et_login_pwd">密码</string>
+    <string name="cb_show_pwd">显示密码</string>
+    <string name="tv_label_login_pattern">用以下方式登录</string>
+    <string name="btn_login_pattern_qq">QQ</string>
+    <string name="btn_login_pattern_wechat">微信</string>
 
     <string name="title_activity_chat">与%s对话</string>
     <string name="btn_send">发送</string>
@@ -8,7 +21,8 @@
     <string name="action_image">图片</string>
     <string name="action_voice">语音</string>
     <string name="action_select_image">选择图片</string>
-    <string name="btn_activity_back">返回</string>
     <string name="btn_voice_record">长按录音</string>
     <string name="btn_voice_record_up">发送语音</string>
+
+
 </resources>
