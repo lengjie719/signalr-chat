@@ -3,10 +3,14 @@
     <string name="action_settings">Settings</string>
     <string name="btn_activity_back">Back</string>
 
+    <!-- 引导页 -->
+    <string name="title_activity_main">signalr-chat</string>
     <string name="btn_login">Sign in</string>
     <string name="btn_register">Sign up</string>
     <string name="hello_world">Hello world!</string>
 
+    <!-- 登录页 -->
+    <string name="title_activity_login">LoginActivity</string>
     <string name="hint_et_login_no">Phone Number/QQ/WeChat</string>
     <string name="hint_et_login_pwd">Password</string>
     <string name="cb_show_pwd">show password</string>
@@ -14,6 +18,18 @@
     <string name="btn_login_pattern_qq">QQ</string>
     <string name="btn_login_pattern_wechat">WeChat</string>
 
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <!-- Home页 -->
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tv_activity_title_history">Recently</string>
+    <string name="tv_activity_title_roster">Buddies</string>
+    <string name="tv_activity_title_account">Account Information</string>
+    <string name="tv_list_chat">Recent</string>
+    <string name="tv_list_friend">Buddies</string>
+    <string name="tv_account_management">Account</string>
+
+    <!-- 聊天页 -->
     <string name="title_activity_chat">Chat with %s</string>
     <string name="btn_send">Send</string>
     <string name="action_text">Text</string>
@@ -22,10 +38,6 @@
     <string name="action_voice">Voice</string>
     <string name="btn_voice_record">Hold and Speak loudly</string>
     <string name="btn_voice_record_up">Release and Send voice </string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
-
 
 
 </resources>

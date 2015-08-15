@@ -23,7 +23,7 @@
                   android:inputType="textPassword"
                   android:hint="@string/hint_et_login_pwd"/>
 
-        <CheckBox
+        <CheckBox android:id="@+id/cb_show_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cb_show_pwd"/>

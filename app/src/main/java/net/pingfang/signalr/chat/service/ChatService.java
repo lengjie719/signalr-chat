@@ -62,7 +62,7 @@ public class ChatService {
                     public void run(String msgType, String msg) {
                         Intent intent = new Intent();
                         intent.setAction(GlobalApplication.ACTION_INTENT_TEXT_MESSAGE_INCOMING);
-                        intent.putExtra("buddy","server");
+                        intent.putExtra("name","server");
                         intent.putExtra("body", msg);
                         context.sendBroadcast(intent);
                     }

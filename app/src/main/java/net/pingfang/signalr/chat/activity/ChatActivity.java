@@ -10,6 +10,8 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
+import android.support.v4.app.NavUtils;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -51,7 +53,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
     MessageReceiver receiver;
 
-    String buddy = "server";
+    String name = "server";
+    String uid = "001";
     ChatService chatService;
 
     MediaRecorder mRecorder;
@@ -65,6 +68,9 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_chat);
 
         chatService = ChatService.newInstance(getApplicationContext());
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        uid = intent.getStringExtra("uid");
 
         initView();
     }
@@ -74,7 +80,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         btn_activity_back.setOnClickListener(this);
 
         tv_activity_title = (TextView) findViewById(R.id.tv_activity_title);
-        tv_activity_title.setText(getString(R.string.title_activity_chat, buddy));
+        tv_activity_title.setText(getString(R.string.title_activity_chat, name));
 
         ll_message_container = (LinearLayout) findViewById(R.id.ll_message_container);
 
@@ -84,7 +90,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
                 if (actionId == EditorInfo.IME_ACTION_SEND) {
-                    sendMessage(buddy);
+                    sendMessage(name);
                     handled = true;
                 }
                 return handled;
@@ -168,10 +174,10 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         int viewId = view.getId();
         switch(viewId) {
             case R.id.btn_activity_back:
-//                navigateUp();
+                navigateUp();
                 break;
             case R.id.btn_send:
-                sendMessage(buddy);
+                sendMessage(name);
                 break;
         }
     }
@@ -192,9 +198,9 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         chatService.destroy();
     }
 
-    private void sendMessage(String buddy) {
+    private void sendMessage(String name) {
         if(!TextUtils.isEmpty(et_message.getText().toString().trim())) {
-            chatService.sendMessage(buddy, et_message.getText().toString().trim());
+            chatService.sendMessage(name, et_message.getText().toString().trim());
 
             LinearLayout ll = new LinearLayout(getApplicationContext());
             ll.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -251,7 +257,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                         Bitmap bitmap = MediaFileUtils.decodeBitmapFromPath(filePath,
                                 MediaFileUtils.dpToPx(getApplicationContext(),150),
                                 MediaFileUtils.dpToPx(getApplicationContext(),150));
-                        inflaterImgMessage(bitmap,uri,true,buddy);
+                        inflaterImgMessage(bitmap,uri,true,name);
 
 //                        chatService.sendImage(jid,filePath);
                     } else {
@@ -422,9 +428,9 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if(action.equals(GlobalApplication.ACTION_INTENT_TEXT_MESSAGE_INCOMING)) {
-                String nameFrom= intent.getStringExtra("buddy");
+                String nameFrom= intent.getStringExtra("name");
                 String body = intent.getStringExtra("body");
-                if(nameFrom.equals(buddy)) {
+                if(nameFrom.equals(name)) {
                     LinearLayout ll = new LinearLayout(getApplicationContext());
                     ll.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                     ll.setOrientation(LinearLayout.VERTICAL);
@@ -452,6 +458,17 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
             }
+        }
+    }
+
+    public void navigateUp() {
+        Intent upIntent = NavUtils.getParentActivityIntent(this);
+        if(NavUtils.shouldUpRecreateTask(this, upIntent)) {
+            TaskStackBuilder.create(this)
+                    .addNextIntentWithParentStack(upIntent)
+                    .startActivities();
+        } else {
+            onBackPressed();
         }
     }
 

@@ -4,10 +4,12 @@
     <string name="action_settings">设置</string>
     <string name="btn_activity_back">返回</string>
 
+    <!-- 引导页 -->
     <string name="btn_login">登录</string>
     <string name="btn_register">注册</string>
     <string name="hello_world">引导页</string>
 
+    <!-- 登录页 -->
     <string name="hint_et_login_no">手机号码/QQ/微信</string>
     <string name="hint_et_login_pwd">密码</string>
     <string name="cb_show_pwd">显示密码</string>
@@ -15,6 +17,15 @@
     <string name="btn_login_pattern_qq">QQ</string>
     <string name="btn_login_pattern_wechat">微信</string>
 
+    <!-- Home页 -->
+    <string name="tv_activity_title_history">最近记录</string>
+    <string name="tv_activity_title_roster">好友</string>
+    <string name="tv_activity_title_account">个人信息</string>
+    <string name="tv_list_chat">聊天列表</string>
+    <string name="tv_list_friend">好友列表</string>
+    <string name="tv_account_management">账户管理</string>
+
+    <!-- 聊天页 -->
     <string name="title_activity_chat">与%s对话</string>
     <string name="btn_send">发送</string>
     <string name="action_text">文字</string>
