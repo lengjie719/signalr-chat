@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">signalr-chat</string>
+    <string name="app_name">Hale</string>
     <string name="action_settings">Settings</string>
     <string name="btn_activity_back">Back</string>
 
     <!-- 引导页 -->
-    <string name="title_activity_main">signalr-chat</string>
+    <string name="title_activity_main">Hale</string>
     <string name="btn_login">Sign in</string>
     <string name="btn_register">Sign up</string>
     <string name="hello_world">Hello world!</string>
@@ -22,10 +22,10 @@
 
     <!-- Home页 -->
     <string name="title_activity_home">HomeActivity</string>
-    <string name="tv_activity_title_history">Recently</string>
+    <string name="tv_activity_title_message">Recently</string>
     <string name="tv_activity_title_roster">Buddies</string>
-    <string name="tv_activity_title_account">Account Information</string>
-    <string name="tv_list_chat">Recent</string>
+    <string name="tv_activity_title_account">Account</string>
+    <string name="tv_list_chat">Message</string>
     <string name="tv_list_friend">Buddies</string>
     <string name="tv_account_management">Account</string>
 
@@ -38,6 +38,17 @@
     <string name="action_voice">Voice</string>
     <string name="btn_voice_record">Hold and Speak loudly</string>
     <string name="btn_voice_record_up">Release and Send voice </string>
+
+    <!-- 设置页 -->
+    <string name="title_activity_settings">@string/action_settings</string>
+    <string name="tv_settings_item_suggestion">Feedback</string>
+    <string name="tv_settings_item_version">Current Version : %s</string>
+    <string name="tv_settings_item_about">About Us</string>
+
+    <!-- BuddyFragment -->
+    <string name="tv_fragment_buddy">BuddyFragment</string>
+
+    <string name="tv_fragment_account">AccountFragment</string>
 
 
 </resources>

@@ -14,9 +14,8 @@ public class CollectionPagerAdapter extends FragmentPagerAdapter {
 
     List<Fragment> fragmentList = new ArrayList<>();
 
-    public CollectionPagerAdapter(FragmentManager fm,Fragment fragment) {
+    public CollectionPagerAdapter(FragmentManager fm) {
         super(fm);
-        fragmentList.add(fragment);
     }
 
     @Override

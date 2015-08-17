@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="settings_item_default_pressed_edge">#ffadadad</color>
+    <color name="settings_item_default_pressed">#ffebebeb</color>
+    <color name="settings_item_default_selected_edge">#ffadadad</color>
+    <color name="settings_item_default_selected">#ffebebeb</color>
+    <color name="settings_item_default_edge">#ffcccccc</color>
+    <color name="settings_item_default">@android:color/white</color>
+</resources>

@@ -11,7 +11,9 @@ import android.widget.TextView;
 
 import net.pingfang.signalr.chat.R;
 import net.pingfang.signalr.chat.adapter.CollectionPagerAdapter;
-import net.pingfang.signalr.chat.fragment.ChatHistoryFragment;
+import net.pingfang.signalr.chat.fragment.AccountFragment;
+import net.pingfang.signalr.chat.fragment.BuddyFragment;
+import net.pingfang.signalr.chat.fragment.MessageFragment;
 import net.pingfang.signalr.chat.util.OnFragmentInteractionListener;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener,OnFragmentInteractionListener {
@@ -20,7 +22,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     FrameLayout fl_container;
     ViewPager pager;
 
-    ChatHistoryFragment chatHistoryFragment;
+    MessageFragment messageFragment;
+    BuddyFragment buddyFragment;
+    AccountFragment accountFragment;
+
 
     Button btn_list_chat;
     Button btn_list_friend;
@@ -50,9 +55,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initAdapter() {
-        chatHistoryFragment = ChatHistoryFragment.newInstance();
-        adapter = new CollectionPagerAdapter(getSupportFragmentManager(), chatHistoryFragment);
-
+        messageFragment = MessageFragment.newInstance();
+        buddyFragment = BuddyFragment.newInstance();
+        accountFragment = AccountFragment.newInstance();
+        adapter = new CollectionPagerAdapter(getSupportFragmentManager());
+        adapter.add(messageFragment);
+        adapter.add(buddyFragment);
+        adapter.add(accountFragment);
         pager.setAdapter(adapter);
 
         pager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -66,7 +75,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         tv_activity_title.setText(R.string.tv_activity_title_account);
                         break;
                     case 0:
-                        tv_activity_title.setText(R.string.tv_activity_title_history);
+                        tv_activity_title.setText(R.string.tv_activity_title_message);
                         break;
                 }
             }
@@ -75,7 +84,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void loadMessage() {
-        ChatHistoryFragment fragment = (ChatHistoryFragment) adapter.getItem(0);
+        MessageFragment fragment = (MessageFragment) adapter.getItem(0);
         fragment.updateMessage("server","0001","");
     }
 

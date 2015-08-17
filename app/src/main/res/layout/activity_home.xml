@@ -15,7 +15,7 @@
                   android:layout_height="wrap_content"
                   android:layout_centerInParent="true"
                   android:padding="@dimen/padding_activity_title"
-                  android:text="@string/tv_activity_title_history"
+                  android:text="@string/tv_activity_title_message"
                   android:textSize="@dimen/text_size_activity_title" />
 
     </RelativeLayout>

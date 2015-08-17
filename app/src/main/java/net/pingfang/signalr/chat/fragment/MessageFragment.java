@@ -25,7 +25,7 @@ import java.util.List;
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
  */
-public class ChatHistoryFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class MessageFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     private OnFragmentInteractionListener mListener;
 
@@ -42,8 +42,8 @@ public class ChatHistoryFragment extends Fragment implements AbsListView.OnItemC
 
     private List<MessageHolder> listMessage = new ArrayList<>();
 
-    public static ChatHistoryFragment newInstance() {
-        ChatHistoryFragment fragment = new ChatHistoryFragment();
+    public static MessageFragment newInstance() {
+        MessageFragment fragment = new MessageFragment();
         return fragment;
     }
 
@@ -51,7 +51,7 @@ public class ChatHistoryFragment extends Fragment implements AbsListView.OnItemC
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ChatHistoryFragment() {
+    public MessageFragment() {
     }
 
     @Override
@@ -63,7 +63,7 @@ public class ChatHistoryFragment extends Fragment implements AbsListView.OnItemC
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_list_message, container, false);
 
         mListView = (ListView) view.findViewById(android.R.id.list);
 
