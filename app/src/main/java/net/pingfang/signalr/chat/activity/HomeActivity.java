@@ -1,9 +1,15 @@
 package net.pingfang.signalr.chat.activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
+import android.view.ContextThemeWrapper;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -19,6 +25,7 @@ import net.pingfang.signalr.chat.util.OnFragmentInteractionListener;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener,OnFragmentInteractionListener {
 
     TextView tv_activity_title;
+    TextView tv_menu_drop_down;
     FrameLayout fl_container;
     ViewPager pager;
 
@@ -44,6 +51,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         tv_activity_title = (TextView) findViewById(R.id.tv_activity_title);
+        tv_menu_drop_down = (TextView) findViewById(R.id.tv_menu_drop_down);
+        tv_menu_drop_down.setOnClickListener(this);
+        fl_container = (FrameLayout) findViewById(R.id.fl_container);
         fl_container = (FrameLayout) findViewById(R.id.fl_container);
         pager = (ViewPager) findViewById(R.id.pager);
         btn_list_chat = (Button) findViewById(R.id.btn_list_chat);
@@ -85,7 +95,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void loadMessage() {
         MessageFragment fragment = (MessageFragment) adapter.getItem(0);
-        fragment.updateMessage("server","0001","");
+        fragment.updateMessage("server", "0001", "");
     }
 
     @Override
@@ -98,9 +108,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        int viewId = v.getId();
+    public void onClick(View view) {
+        int viewId = view.getId();
         switch(viewId) {
+            case R.id.tv_menu_drop_down:
+                popupMenu(view);
+                break;
             case R.id.btn_list_chat:
                 pager.setCurrentItem(0);
                 break;
@@ -113,4 +126,28 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private void popupMenu(View view) {
+        ContextThemeWrapper wrapper = new ContextThemeWrapper(getApplicationContext(), R.style.AppTheme);
+        PopupMenu popup = new PopupMenu(wrapper, view);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.menu_home, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_scan:
+
+                        break;
+                    case R.id.action_resource:
+
+                        break;
+                    case R.id.action_maintain:
+
+                        break;
+                }
+                return true;
+            }
+        });
+        popup.show();
+    }
 }

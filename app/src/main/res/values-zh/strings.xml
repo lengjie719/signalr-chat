@@ -5,7 +5,7 @@
     <string name="btn_activity_back">返回</string>
 
     <!-- 引导页 -->
-    <string name="title_activity_main">哈乐</string>
+    <string name="title_activity_main">哈乐 %s</string>
     <string name="btn_login">登录</string>
     <string name="btn_register">注册</string>
     <string name="hello_world">引导页</string>
@@ -14,6 +14,7 @@
     <string name="hint_et_login_no">手机号码/QQ/微信</string>
     <string name="hint_et_login_pwd">密码</string>
     <string name="cb_show_pwd">显示密码</string>
+    <string name="tv_pwd_forget">忘记密码</string>
     <string name="tv_label_login_pattern">用以下方式登录</string>
     <string name="btn_login_pattern_qq">QQ</string>
     <string name="btn_login_pattern_wechat">微信</string>
@@ -25,6 +26,10 @@
     <string name="tv_list_chat">消息</string>
     <string name="tv_list_friend">好友</string>
     <string name="tv_account_management">我</string>
+    <string name="tv_menu_drop_down">下拉菜单</string>
+    <string name="menu_action_scan">扫一扫</string>
+    <string name="menu_action_resource">资源上传</string>
+    <string name="menu_action_maintain">广告维护</string>
 
     <!-- 聊天页 -->
     <string name="title_activity_chat">与%s对话</string>
@@ -37,9 +42,11 @@
     <string name="btn_voice_record_up">发送语音</string>
 
     <!-- 设置页 -->
+    <string name="tv_app_name_version_code">哈乐 V%s</string>
     <string name="title_activity_settings">@string/action_settings</string>
-    <string name="tv_settings_item_version">当前版本 : %s</string>
+    <string name="tv_settings_item_version">检查更新</string>
     <string name="tv_settings_item_suggestion">意见反馈</string>
     <string name="tv_settings_item_about">关于我们</string>
+
 
 </resources>

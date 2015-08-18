@@ -23,17 +23,39 @@
                   android:inputType="textPassword"
                   android:hint="@string/hint_et_login_pwd"/>
 
-        <CheckBox android:id="@+id/cb_show_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cb_show_pwd"/>
+
     </LinearLayout>
+
+    <LinearLayout android:id="@+id/ll_pwd_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_form_container">
+
+        <CheckBox android:id="@+id/cb_show_pwd"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/cb_show_pwd"/>
+
+        <TextView
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"/>
+
+        <TextView android:id="@+id/tv_pwd_forget"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="right"
+                  android:text="@string/tv_pwd_forget"/>
+
+    </LinearLayout>
+
 
     <LinearLayout android:id="@+id/ll_button_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/ll_form_container"
+        android:layout_below="@+id/ll_pwd_config"
         android:gravity="center">
 
         <Button

@@ -28,6 +28,16 @@
     <string name="tv_list_chat">Message</string>
     <string name="tv_list_friend">Buddies</string>
     <string name="tv_account_management">Account</string>
+    <string name="menu_action_scan">Scan</string>
+    <string name="menu_action_resource">Resource</string>
+    <string name="menu_action_maintain">Maintain</string>
+
+    <!-- BuddyFragment -->
+    <string name="tv_fragment_buddy">BuddyFragment</string>
+
+    <!-- AccountFragment -->
+    <string name="tv_fragment_account">AccountFragment</string>
+
 
     <!-- 聊天页 -->
     <string name="title_activity_chat">Chat with %s</string>
@@ -40,15 +50,12 @@
     <string name="btn_voice_record_up">Release and Send voice </string>
 
     <!-- 设置页 -->
+    <string name="tv_app_name_version_code">Hale V%s</string>
     <string name="title_activity_settings">@string/action_settings</string>
     <string name="tv_settings_item_suggestion">Feedback</string>
-    <string name="tv_settings_item_version">Current Version : %s</string>
+    <string name="tv_settings_item_version">Check New Version</string>
     <string name="tv_settings_item_about">About Us</string>
-
-    <!-- BuddyFragment -->
-    <string name="tv_fragment_buddy">BuddyFragment</string>
-
-    <string name="tv_fragment_account">AccountFragment</string>
-
+    <string name="tv_menu_drop_down">dropdown</string>
+    <string name="tv_pwd_forget">forget password</string>
 
 </resources>

@@ -2,8 +2,17 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="net.pingfang.signalr.chat.activity.HomeActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
+
+    <item android:id="@+id/action_scan"
+          android:title="@string/menu_action_scan"
           android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_resource"
+          android:title="@string/menu_action_resource"
+          android:orderInCategory="101"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_maintain"
+          android:title="@string/menu_action_maintain"
+          android:orderInCategory="102"
           app:showAsAction="never"/>
 </menu>
