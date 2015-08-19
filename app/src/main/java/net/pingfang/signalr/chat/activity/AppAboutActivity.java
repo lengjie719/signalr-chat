@@ -1,48 +1,51 @@
 package net.pingfang.signalr.chat.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import net.pingfang.signalr.chat.R;
 
-public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
+
+public class AppAboutActivity extends AppCompatActivity implements View.OnClickListener{
 
     TextView btn_activity_back;
-    TextView tv_settings_item_about;
+    TextView tv_app_name_version_code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_about);
 
         initView();
     }
 
     private void initView() {
+
         btn_activity_back = (TextView) findViewById(R.id.btn_activity_back);
         btn_activity_back.setOnClickListener(this);
-        tv_settings_item_about = (TextView) findViewById(R.id.tv_settings_item_about);
-        tv_settings_item_about.setOnClickListener(this);
+
+        tv_app_name_version_code = (TextView) findViewById(R.id.tv_app_name_version_code);
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(),0);
+            tv_app_name_version_code.setText(getString(R.string.tv_app_name_version_code,info.versionName));
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onClick(View view) {
         int viewId = view.getId();
-        switch (viewId) {
+        switch(viewId) {
             case R.id.btn_activity_back:
                 navigateUp();
-                break;
-            case R.id.tv_settings_item_about:
-                Intent intent = new Intent();
-                intent.setClass(getApplicationContext(),AppAboutActivity.class);
-                startActivity(intent);
                 break;
         }
     }

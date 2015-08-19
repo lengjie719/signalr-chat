@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:gravity="center_horizontal"
-      tools:context="net.pingfang.signalr.chat.activity.SettingsActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="net.pingfang.signalr.chat.activity.AppAboutActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,18 +22,35 @@
                   android:layout_height="wrap_content"
                   android:layout_centerInParent="true"
                   android:padding="@dimen/padding_activity_title"
-                  android:text="@string/title_activity_settings"
+                  android:text="@string/title_activity_about"
                   android:textSize="@dimen/text_size_activity_title" />
 
     </RelativeLayout>
 
-    <TextView android:id="@+id/tv_settings_item_about"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView android:id="@+id/tv_app_name_version_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+
+    <TextView android:id="@+id/tv_about_item_version"
               style="@style/SettingItemStyle"
-              android:layout_marginTop="@dimen/activity_vertical_margin"
-              android:layout_marginBottom="@dimen/activity_vertical_margin"
               android:background="@drawable/selector_settings_item"
-              android:text="@string/tv_settings_item_about"
+              android:text="@string/tv_about_item_version"/>
+
+    <TextView android:id="@+id/tv_about_item_suggestion"
+              style="@style/SettingItemStyle"
+              android:background="@drawable/selector_settings_item"
+              android:text="@string/tv_about_item_suggestion"
               android:drawableRight="@drawable/setting_view_arrow"
               android:drawableEnd="@drawable/setting_view_arrow"/>
+
+
 
 </LinearLayout>

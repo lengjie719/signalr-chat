@@ -8,6 +8,7 @@ import net.pingfang.signalr.chat.util.GlobalApplication;
 
 import java.util.concurrent.ExecutionException;
 
+import microsoft.aspnet.signalr.client.ConnectionState;
 import microsoft.aspnet.signalr.client.LogLevel;
 import microsoft.aspnet.signalr.client.Logger;
 import microsoft.aspnet.signalr.client.Platform;
@@ -25,6 +26,7 @@ public class ChatService {
     public static final String URL = "http://192.168.0.254/signalr/hubs/";
     HubConnection connection;
     HubProxy hub;
+    SignalRFuture<Void> awaitConnection;
 
     DemonThread thread;
 
@@ -55,6 +57,8 @@ public class ChatService {
             }
         });
 
+        awaitConnection = connection.start();
+
         hub = connection.createHubProxy("communicationHub");
         hub.on("broadcastMessage",
                 new SubscriptionHandler2<String,String>() {
@@ -79,7 +83,7 @@ public class ChatService {
             thread = null;
         }
 
-        if(connection != null) {
+        if(connection != null && connection.getState() == ConnectionState.Connected) {
             connection.stop();
         }
     }
@@ -102,7 +106,6 @@ public class ChatService {
 
         @Override
         public void run() {
-            SignalRFuture<Void> awaitConnection = connection.start();
             while(isRunning) {
                 try {
                     awaitConnection.get();
