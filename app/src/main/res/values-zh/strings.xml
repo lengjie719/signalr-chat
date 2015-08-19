@@ -18,6 +18,11 @@
     <string name="tv_label_login_pattern">用以下方式登录</string>
     <string name="btn_login_pattern_qq">QQ</string>
     <string name="btn_login_pattern_wechat">微信</string>
+    <string name="btn_login_pattern_weibo">微博</string>
+
+    <!-- 注册页 -->
+    <string name="btn_step_previous">上一步</string>
+    <string name="btn_step_next">下一步</string>
 
     <!-- Home页 -->
     <string name="tv_activity_title_message">消息</string>
@@ -47,11 +52,15 @@
     <!-- 设置页 -->
     <string name="title_activity_settings">@string/action_settings</string>
     <string name="tv_settings_item_about">关于哈乐</string>
+    <string name="tv_settings_item_exit">退出</string>
 
     <!-- 关于 -->
     <string name="title_activity_about">@string/tv_settings_item_about</string>
     <string name="tv_app_name_version_code">哈乐 V%s</string>
     <string name="tv_about_item_version">检查更新</string>
+    <string name="tv_about_item_guide">使用帮助</string>
     <string name="tv_about_item_suggestion">意见反馈</string>
+
+
 
 </resources>

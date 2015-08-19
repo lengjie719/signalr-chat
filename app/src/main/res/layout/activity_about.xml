@@ -44,6 +44,13 @@
               android:background="@drawable/selector_settings_item"
               android:text="@string/tv_about_item_version"/>
 
+    <TextView android:id="@+id/tv_about_item_guide"
+              style="@style/SettingItemStyle"
+              android:background="@drawable/selector_settings_item"
+              android:text="@string/tv_about_item_guide"
+              android:drawableRight="@drawable/setting_view_arrow"
+              android:drawableEnd="@drawable/setting_view_arrow"/>
+
     <TextView android:id="@+id/tv_about_item_suggestion"
               style="@style/SettingItemStyle"
               android:background="@drawable/selector_settings_item"

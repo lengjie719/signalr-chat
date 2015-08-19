@@ -36,4 +36,13 @@
               android:drawableRight="@drawable/setting_view_arrow"
               android:drawableEnd="@drawable/setting_view_arrow"/>
 
+    <TextView android:id="@+id/tv_settings_item_exit"
+              style="@style/SettingItemStyle"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:layout_marginBottom="@dimen/activity_vertical_margin"
+              android:background="@drawable/selector_settings_item"
+              android:text="@string/tv_settings_item_exit"
+              android:drawableRight="@drawable/setting_view_arrow"
+              android:drawableEnd="@drawable/setting_view_arrow"/>
+
 </LinearLayout>

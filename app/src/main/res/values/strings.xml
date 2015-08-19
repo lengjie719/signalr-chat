@@ -18,9 +18,12 @@
     <string name="tv_label_login_pattern">Sign in via</string>
     <string name="btn_login_pattern_qq">QQ</string>
     <string name="btn_login_pattern_wechat">WeChat</string>
+    <string name="btn_login_pattern_weibo">Weibo</string>
 
     <!-- 注册页 -->
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="btn_step_previous">Previous</string>
+    <string name="btn_step_next">Next</string>
 
     <!-- Home页 -->
     <string name="title_activity_home">HomeActivity</string>
@@ -56,11 +59,15 @@
     <!-- 设置页 -->
     <string name="title_activity_settings">@string/action_settings</string>
     <string name="tv_settings_item_about">About Us</string>
+    <string name="tv_settings_item_exit">Exit</string>
 
     <!-- 关于 -->
     <string name="title_activity_about">About</string>
     <string name="tv_app_name_version_code">Hale V%s</string>
+    <string name="tv_about_item_guide">Guideline</string>
     <string name="tv_about_item_suggestion">Feedback</string>
     <string name="tv_about_item_version">Check New Version</string>
+
+
 
 </resources>
