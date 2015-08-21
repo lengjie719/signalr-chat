@@ -3,6 +3,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/btn_step_previous"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:padding="@dimen/padding_back_button"
+                  android:text="@string/btn_step_previous"/>
+
+        <TextView android:id="@+id/tv_activity_title"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:padding="@dimen/padding_activity_title"
+                  android:text="@string/title_activity_register"
+                  android:textSize="@dimen/text_size_activity_title" />
+
+        <TextView android:id="@+id/btn_step_next"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:padding="@dimen/padding_back_button"
+                  android:text="@string/btn_step_next"/>
+
+    </RelativeLayout>
+
+
     <FrameLayout android:id="@+id/fl_container_reg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -10,24 +40,5 @@
 
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button android:id="@+id/btn_step_previous"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/btn_step_previous"/>
-
-        <Button android:id="@+id/btn_step_next"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/btn_step_next"/>
-
-    </LinearLayout>
 
 </LinearLayout>

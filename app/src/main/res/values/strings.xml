@@ -25,6 +25,20 @@
     <string name="btn_step_previous">Previous</string>
     <string name="btn_step_next">Next</string>
 
+    <!-- 注册之电话号码验证 PhoneFragment -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_et_phone_reg">Phone Number</string>
+    <string name="btn_captcha_req">Captcha</string>
+    <string name="hint_et_validate_code_input">validate code</string>
+    <string name="btn_captcha_submit">Submit</string>
+
+    <!-- 注册值个人资料填写 InfoRegFragment -->
+    <string name="hint_et_nick_name_reg">nick name</string>
+    <string name="hint_et_pwd_reg">password</string>
+    <string name="hint_et_pwd_retype_reg">retype password</string>
+    <string name="hint_et_qq_reg">QQ</string>
+    <string name="btn_info_reg_submit">Submit</string>
+
     <!-- Home页 -->
     <string name="title_activity_home">HomeActivity</string>
     <string name="tv_activity_title_message">Recently</string>
